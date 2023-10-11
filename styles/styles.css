@@ -1,136 +1,304 @@
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
+
+body,
+html {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+
 header {
     background-color: dimgrey;
-    font-family: 'Montserrat', sans-serif
-
-    
-}
-footer {
-    font-family: 'Montserrat', sans-serif;
-    text-align: center;
-}
-main {
-    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
 
 }
+
+.header {
+    grid-area: header;
+}
+
+.modelo {
+    grid-area: modelo;
+}
+
+.main {
+    grid-area: main;
+}
+
+.main section {
+    transform: scale(0.8);
+    width: 80%;
  
+    height: 400px;
+    overflow-y: auto;
+    border: 2px solid #000;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px auto;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.main label,
+.main input,
+.main select,
+.main h3 {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 8px;
+}
+
+.main input[type="submit"] {
+    background-color: #0077b5;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.main input[type="submit"]:hover {
+    background-color: #005494;
+}
+
+.footer {
+    grid-area: footer;
+}
+
+main {
+    background-color: lightslategray;
+    flex: 8;
+}
+
+footer a {
+    margin: 0 10px;
+    color: inherit;
+    text-decoration: none;
+    flex: 1;
+}
+
+footer i {
+    font-size: 20px;
+}
+
+footer {
+    text-align: center;
+
+}
+
 ul {
     list-style-type: none;
     color: black;
     display: flex;
 }
+
 nav li {
-    margin-left: 20px; 
+    margin-left: 20px;
 }
 
 nav a {
-    text-decoration: none; 
+    text-decoration: none;
     color: #fff;
-    transition: color 0.3s; 
+    transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #0077b5; 
+    color: #0077b5;
 }
-h1 {
-    font-style: normal;   
-    text-align: center;
-}
+
+h1,
 h2 {
     text-align: center;
 }
 
-
-form {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-}
-
-input[type="text"], input[type="email"], textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    font-size: 16px;
-}
-
-textarea {
-    resize: vertical; 
-}
-
-input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #0077b5;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type="submit"]:hover {
-    background-color: #005fa3;
-}
-
-.logo { width: 150px;
-height: auto}
-.conjuntos {
-    width: 300px;
+.logo {
+    width: 75px;
     height: auto;
 }
-.conjuntos {
-    display: flex;             
-    justify-content: space-between; 
-    align-items: center;       
-    width: 100%;           
-    padding: 20px;  
-}
 
-.conjuntos {
-    width: 300px;
-}
 .campaña-2023 {
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
 }
-img {display: flex;}
+
 .contenedor-de-imagenes {
-    display: flex;             
-    justify-content: space-between; 
-    align-items: center;       
-    width: 100%;           
-    padding: 20px;             /
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    margin: 10px;
 }
 
 .contenedor-de-imagenes img {
-    width: calc(50%); 
-}
-body, html {
-    height: 100%;   
+    width: auto;
 }
 
-.campaña-2023 {
-    display: flex;          
-    justify-content: center; 
-    align-items: center;    
-    
-    height: 100%;
-    width: 100%;        
+.conjuntos {
+    width: 100%;
+    height: 220px;
+
+}
+
+.iframe-video {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.historia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    gap: 20px;
+}
+
+.historia h1,
+.historia h2 {
+    margin-bottom: 20px;
+}
+
+.historia p {
+    margin-bottom: 20px;
+    max-width: 800px;
+}
+
+.imagenes-historia {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 
+.card-contenedor {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    align-items: center;
+    gap: 50px;
+}
+
+.card-contenedor h3,
+p {
+    text-align: center;
+}
+
+.img {
+    width: 100%;
+    height: 220px;
+}
+
+.ticker {
+    display: flex;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    background-color: black;
+    padding: 25px 5px;
+    position: relative;
+}
+
+.ticker::before {
+    content: "¡SALE! 25% de descuento en tu próxima compra.   ";
+
+    position: absolute;
+    margin-top: 30px;
+    white-space: nowrap;
+    top: 0;
+    right: -100%;
+    animation: ticker 10s linear infinite;
+}
+
+@keyframes ticker {
+    from {
+        right: 100%;
+    }
+
+    to {
+        right: -100%;
+    }
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 30% 80%;
+
+    grid-template-rows: 75px 1fr 75px;
+
+    height: 100vh;
+
+    grid-template-areas:
+        "header header"
+        "modelo main"
+        "footer footer"
+    ;
+}
+
+.modelo {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.historia {
+    display: flex;
+}
+
+.imagenes-historia {
+    width: 100%;
+    height: 220px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "footer";
+    }
+
+    .contenedor-de-imagenes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contenedor-de-imagenes img {
+        width: 100%;
+        margin-bottom: 10px;
+
+    }
+
+    .card-contenedor {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 10px 0;
+
+    }
+
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
